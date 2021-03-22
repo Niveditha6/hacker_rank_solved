@@ -1,0 +1,19 @@
+n=int(input())
+l=[int(i) for i in input().split()]
+dic={}
+for ele in l:
+    if ele in dic:
+        dic[ele]+=1
+    else:
+        dic[ele]=1
+#print(dic)
+values=dic.values()
+vl=list(values)
+#print(vl)
+maxi=0
+for i in range(0,len(vl)):
+    if i<=len(vl)-2:
+        a=int(vl[i])+int(vl[i+1])
+        if maxi <  a:
+            maxi=a
+print(maxi)
