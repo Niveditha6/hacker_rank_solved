@@ -1,0 +1,16 @@
+nkq=list(map(int,input().split()))
+ls=list(map(int,input().split()))
+q=[]
+for i in range(nkq[2]):
+    ele=int(input())
+    q.append(ele)
+nls=[]
+for i in range(nkq[1]):
+    nls.append(ls[-1])
+    for i in range(1,nkq[0]):
+        nls.append(ls[i-1])
+    ls.clear()
+    ls=nls[ : ]
+    nls.clear()
+for ele in range(nkq[2]):
+    print(ls[ele])
